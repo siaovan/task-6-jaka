@@ -1,404 +1,73 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #d9dcdf;
-}
-/* Navbar Styles */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    background-color: #333;
-}
-
-.brand-title {
-    font-size: 1.5rem;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.navbar-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.navbar-links li {
-    display: inline-block;
-    padding: 0 20px;
-}
-
-.navbar-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.navbar-links a:hover {
-    color: #ddd;
-}
-
-/* Toggle Button Styles */
-.toggle-button {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        width: 100%;
+/* Responsive Styles for Handphone */
+@media (max-width: 600px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
     }
     
-    .navbar-links ul {
+    .brand-title {
+        font-size: 1.2rem;
+    }
+
+    .navbar-links {
         width: 100%;
         flex-direction: column;
+        padding: 0;
     }
-    
+
     .navbar-links li {
+        padding: 10px 0;
         text-align: center;
-        padding: 15px 0;
     }
-    
-    .navbar-links.active {
-        display: flex;
+
+    /* Search Bar */
+    .search-bar input {
+        width: 150px;
+        padding: 8px;
     }
-    
-    .toggle-button {
-        display: flex;
+
+    .search-bar button {
+        padding: 8px 15px;
+    }
+
+    /* Categories */
+    .categories ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* Cards */
+    .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    /* CTA Buttons */
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+
+    /* Back to Top Button */
+    #backToTopBtn {
+        padding: 10px;
+        border-radius: 10px;
+        bottom: 15px;
+        right: 20px;
     }
 }
-
-header {
-    text-align: center;
-    padding: 8px;
-    background-color: #d9dcdf;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-
-header p {
-    margin-bottom: 20px;
-    color:  #9d9e9e;
-}
-
-.search-bar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    padding: 10px;
-    width: 200px;
-    border: 1px solid #868484;
-    border-radius: 4px 0 0 4px;
-}
-
-.search-bar button {
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    border-left: none;
-    background-color: #28a745;
-    color: #fff;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
-}
-
-main {
-    padding: 2px;
-
-}
-
-/* Categories Styles */
-
-.categories {
-    margin: 20px;
-}
-
-.categories ul {
-    list-style: none;
-    padding: 10;
-    display: flex;
-    gap: 11px;
-}
-
-.categories ul li {
-    margin: 0;
-}
-
-.categories ul li a {
-    text-decoration: none;
-    padding: 5px 8px;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    color: #333;
-    font-weight: bold;
-}
-
-.categories ul li a:hover {
-    background-color: #d4d4d4;
-}
-
-.categories ul li a.active {
-    background-color: #28a745;
-    color: white;
-}
-
-.categories ul li a:not(.active):hover {
-    background-color: #d4d4d4;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 2px;
-}
-
-.card {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin: 20px;
-    max-width: 455px;
-    overflow: hidden;
-    text-align: left;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card-img {
-    width: 100%;
-    height: auto;
-}
-
-.card-content {
-    padding: 9px;
-}
-
-.tag {
-    display: inline-block;
-    background-color: #e0f7fa;
-    border-radius: 50px;
-    color: #00796b;
-    font-size: 12px;
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    text-transform: uppercase;
-}
-
-.tag-marketing {
-    background-color: #e8f5e9;
-    color: #43a047;
-}
-
-.tag-startup {
-    background-color: #e1f5fe;
-    color: #0288d1;
-}
-
-.date {
-    color: #757575;
-    font-size: 12px;
-    margin: 5px 0;
-}
-
-.card-title {
-    color: #333;
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-.card-text {
-    color: #777;
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-.read-more {
-    color: #4caf50;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.read-more:hover {
-    text-decoration: underline;
-}
-
-.cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1px;
-
-}
-
-.button {
-    padding: 12px 20px;
-    font-size: 21px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color:  #12ad36;;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 7px #979595;
-    align-items: center;
-    margin: 20px;
-    text-decoration: none;
-
-  }
-  
-  .button:hover {background-color: #088f0d}
-  
-  .button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #3b3a3a;
-    transform: translateY(4px);
-  }
-
-
-.button1{
-  padding: 12px 20px;
-  font-size: 21px;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color:  #0d0e0d;;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 7px #979595;
-  align-items: center;
-  margin: 20px;
-  text-decoration: none;
-}
-
-
-.button1:hover {background-color: #595c59}
-
-.button1:active {
-  background-color: #09af0f;
-  box-shadow: 0 5px #969595;
-  transform: translateY(4px);
-}
-
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
-.footer {
-    background-color: #0f0f0f;
-    color: white;
-    padding: 40px 0;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 20px;
-}
-
-.footer-section h3 {
-    border-bottom: 2px solid #f5f8fa;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.footer-section p,
-.footer-section ul,
-.footer-section form {
-    margin: 0;
-    padding: 0;
-}
-
-.footer-section ul {
-    list-style: none;
-}
-
-.footer-section ul li {
-    margin: 10px 0;
-}
-
-.footer-section ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.social-media a {
-    color: white;
-    margin-right: 10px;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.photo-gallery img {
-    width: 60px;
-    height: 60px;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-.footer-section form {
-    display: flex;
-    align-items: center;
-}
-/* Style the button */
-#backToTopBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 20px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color: #28a745; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 15px; /* Some padding */
-    border-radius: 15px; /* Rounded corners */
-    margin: 2px;
-}
-
-#backToTopBtn:hover {
-    background-color: #807d7d; /* Add a dark-grey background on hover */
-}
-
